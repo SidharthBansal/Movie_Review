@@ -20,6 +20,16 @@
           <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
           <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
         <% end %>
+
+        <div id="user_nav">
+          <% if current_user %>
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <% else %>
+            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+          <% end %>
+        </div>
+
       </ul>
      <form class="navbar-form navbar-left" role="search">
       <div class ="form-group">

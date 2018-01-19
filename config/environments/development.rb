@@ -52,4 +52,6 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  ENV['FACEBOOK_APP_ID'] = "224288451448270";
+  ENV['FACEBOOK_SECRET'] = "f40bdb4edf3dcb40cb3c147ac5e9e6ae";
 end
